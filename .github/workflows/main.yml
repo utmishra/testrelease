@@ -1,2 +1,25 @@
-- name: Automatic Releases
-  uses: marvinpinto/action-automatic-releases@v0.2.2
+---
+name: "pre-release"
+
+on:
+  push:
+    branches:
+      - "master"
+
+jobs:
+  pre-release:
+    name: "Pre Release"
+    runs-on: "ubuntu-latest"
+
+    steps:
+      # ...
+      - name: "Build & test"
+        run: |
+          echo "done!"
+
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "0a7fa2d9ddf21318b93ad006b2640b135faeb96e"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Development Build"
