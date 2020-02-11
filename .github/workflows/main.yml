@@ -19,7 +19,7 @@ jobs:
 
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
-          repo_token: "0a7fa2d9ddf21318b93ad006b2640b135faeb96e"
+          repo_token: "662897e26238b635847f9e7abf6562d03ded4612"
           automatic_release_tag: "latest"
           prerelease: true
           title: "Development Build"
